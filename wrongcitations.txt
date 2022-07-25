@@ -1,0 +1,36 @@
+\section{\uppercase{Traditional way}}
+
+A web site is created that allows fundraising organizations to raise money on a computer network. A fundraising organization sets up a computer network-based fundraising campaign by creating a home page, which is accessible to members of the public over the internet. The home page provides a description of the fundraising organization, as well as the purpose for which money is needed.
+
+Participants in the campaign collect e-mail addresses of friends and relatives who may be interested in contributing to the campaign. One or more solicitation messages are sent to these potential supporters, asking the potential supporters to visit the home page and learn more about the fundraising organization and the purpose for the campaign. 
+
+From the home page, potential supporters are directed to a transactional user interface, where they can buy a product or contribute money in support of the fundraising organization. If the potential supporter chooses to purchase a product, the product is shipped directly to the potential supporter and a certain percentage of the purchase price what is bought goes back to the fundraising organization. If the potential supporter chooses to make a contribution, a certain percentage of what is contributed goes back to the fundraising organization.
+
+\newpage
+
+\section{\uppercase{Social way}}
+Social networking applications such as Facebook, Twitter, and Crowdrise offer new ways for nonprofits to engage the community in fundraising efforts.
+
+This study employs data from Facebook Causes to examine the nature and determinants of charitable giving in social networking environments. Our findings suggest donations on these sites are not driven by the same factors as in “off-line” settings. Instead, a social network effect takes precedence over traditional economic explanations.
+
+Facebook donors do not seem to care about efficiency ratios, their donations are typically small, and fundraising success is related not to the organization’s financial capacity but to its “Web capacity.
+
+” Moreover, online donors are prone to contribute to certain categories of causes more than others, especially those related to health. Given the growth in social media-driven fundraising—and the increase in crowdfunding, slacktivism, impulse donating, and other new practices this entails—these findings carry notable theoretical and practical implications.Online audiences (e.g. Facebook friends, Instagram followers) shape users' self-presentation online, but little is known about whether or not they impact users' actions in ‘reality’, so offline, when they are not engaged directly with a site interface. 
+
+To bridge this gap, we provide the first investigation of the ‘extended warming effect’ of social media, a special form of a phenomenon in which saliency (cognition) of online audiences in offline encounters triggers impression management behavior in the pursuit of a more desirable online public image.
+
+Across two controlled experiments in the context of charity fundraising, we support the existence of the extended warming effect. We find that as online audiences become more salient, people show greater intentions of engaging in prosocial behavior offline (e.g. enhanced likelihood of making a donation). 
+
+This effect is mediated by higher public self-awareness and extrinsic motivations. In addition, we find that the extended warming effect is amplified for more intense social media users.
+
+\section{\uppercase{Non Govermental Organization's}}
+A Non-Governmental Organisation, better known as an NGO, is an association that is registered with the government and works for the upliftment of society.
+
+However, the association has a clear and definite program or cause, which it supports. Indeed, the causes an NGO supports may be cultural, religious, social or educational in nature. NGOs are commonly called Non-Profit Organisations as times by the general public.
+
+NGOs have a particular purpose or cause that they support.
+NGOs are voluntary groups, created by like-minded people who want to help serve society.
+They function as autonomous bodies, having only a little or no governmental interference.
+NGOs have their own set of rules, regulations, and policies, depending on their cause.
+NGOs are not profit-making or profit-sharing companies. Rather, they help in empowering and bettering our society.
+They generate, create, and manage their funds via contributions and donations from the public.

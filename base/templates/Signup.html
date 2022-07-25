@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sharity Account</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="{% static '/fonts/favicon.ico'  %}">
+
+    <link rel="stylesheet" href="{% static '/css/animate.css'  %}">
+    <link rel="stylesheet" href="{% static '/css/icomoon.css'  %}">
+    <link rel="stylesheet" href="{% static '/css/bootstrap.css'  %}">
+    <link rel="stylesheet" href="{% static '/css/superfish.css'  %}">
+
+    <link rel="stylesheet" href="{% static '/css/style.css'  %}">
+
+    <script src="{% static '/js/modernizr-2.6.2.min.js' %}"></script>
+
+    <style type="text/css">
+    fieldset {
+  background-color: #D3D3D3;
+  padding:10px;
+  width:1000px;
+  line-height:1.8;
+}
+
+legend {
+  background-color: grey;
+  color: white;
+  padding: 5px 10px;
+}
+
+input {
+  margin: 5px;
+}
+
+label {
+margin-left: 12em;
+float: left;
+width: 20em;
+margin-right: -15em;
+}
+</style>
+
+</head>
+
+<body>
+<style>
+        .user-logout {
+            font-size: 15px;
+            font-weight: bold;
+            color: black;
+            margin-right: 7px;
+        }
+    </style>
+   <div id="fh5co-wrapper">
+        <div id="fh5co-page">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 text-left fh5co-link">
+                    </div>
+                    <div class="col-md-6 col-sm-6 text-right fh5co-social">
+
+                    {% if user.is_authenticated %}
+        <img style="
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;" src="{{user.profile.dp.url}}" />
+       <span class="user-logout">{{request.user.profile.first_name}} {{request.user.profile.last_name}}</span>
+
+        {% else %}
+        <img style="
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;" src="{% static '/images/anonymous2.png' %}" />
+        <span class="user-logout">{{request.user}} </span>
+
+        {% endif %}
+                </div>
+            </div>
+            </div>
+        </div>
+
+               <header id="fh5co-header-section" class="sticky-banner">
+            <div class="container">
+                <div class="nav-header">
+                    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"></a>
+                    <h1 id="fh5co-logo"><a href="{% url 'home'%}"><big><i>Sharity</i></big></a></h1>
+                    <nav id="fh5co-menu-wrap" role="navigation">
+                        <ul class="sf-menu" id="fh5co-primary-menu">
+                             <li class="active"><a href="{% url 'profile'%}"><strong>Profile</strong></a></li>
+                            <li><a href="{% url 'post'%}"><strong>Post Page</strong></a></li>
+                            <li><a href="{% url 'createpost'%}"><strong>Create Post</strong></a></li>
+                            {% if user.is_authenticated %}
+                            <li><a href="{% url 'logout'%}"><strong>Logout</strong></a></li>
+                            {% else %}
+                            <li><a href="{% url 'login'%}"><strong>Login</strong></a></li>
+                            {% endif %}
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+            <div>
+                <form method="post">{% csrf_token %}
+                    <center>
+                        <fieldset>
+                        <legend><b>Fill the form to Create an Account</b></legend>
+
+                        <label><strong><big>Username: </big></strong></label>
+                        <!--<input type="text" name="firstname">-->{{form.username}}
+                        <br>
+                        <br>
+                        <label><strong><big>Email id: </big></strong></label>{{form.email}}
+                        <br>
+                        <br>
+                        <label><strong><big>Password: </big></strong></label>
+                        <!--<input type="password" name="password"> -->
+                        {{form.password1}}
+                        <br>
+                        <br>
+                        <label><strong><big>Re-enter Password: </big></strong></label>
+                        <!--<input type="password" name="rpassword"> -->
+                        {{form.password2}}
+                        <br>
+                        <br>
+                        <br>
+
+                        <div>
+                            <center><input class="btn btn-primary btn-lg" type='submit' value="Create Account" /></center>
+                            <br>
+                            <br>
+
+                        </div>
+                        </fieldset>
+                    </center>
+                
+                </form>
+            </div>
+                {{form.errors}}
+                <br><br><br>
+
+
+                <footer>
+            <div id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3 text-center">
+                            <p class="fh5co-social-icons">
+                                <a href="https://twitter.com/?lang=en"><i class="icon-twitter2"></i></a>
+                                <a href="https://www.facebook.com/"><i class="icon-facebook2"></i></a>
+                                <a href="https://www.instagram.com/"><i class="icon-instagram"></i></a>
+                            </p>
+                            <p>Copyright 2021 Sharity. All Rights Reserved. <br></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</html>

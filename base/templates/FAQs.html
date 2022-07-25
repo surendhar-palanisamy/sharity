@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+ <html class="no-js">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sharity FAQs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="{% static '/fonts/favicon.ico'  %}">
+    
+    <link rel="stylesheet" href="{% static '/css/animate.css'  %}">
+    <link rel="stylesheet" href="{% static '/css/icomoon.css'  %}">
+    <link rel="stylesheet" href="{% static '/css/bootstrap.css'  %}">
+    <link rel="stylesheet" href="{% static '/css/superfish.css'  %}">
+    <link rel="stylesheet" href="{% static '/css/style.css'  %}">
+
+    <script src="js/modernizr-2.6.2.min.js"></script>
+
+	</head>
+	<body>
+		<style>
+        .user-logout {
+            font-size: 15px;
+            font-weight: bold;
+            color: black;
+            margin-right: 5px;
+        }
+    </style>
+   <div id="fh5co-wrapper">
+        <div id="fh5co-page">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 text-left fh5co-link">
+                    </div>
+                    <div class="col-md-6 col-sm-6 text-right fh5co-social">
+
+                    {% if user.is_authenticated %}
+        <img style="
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;" src="{{user.profile.dp.url}}" />
+       <span class="user-logout">{{request.user.profile.first_name}} {{request.user.profile.last_name}}</span>
+
+        {% else %}
+        <img style="
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;" src="{% static '/images/anonymous2.png' %}" />
+        <span class="user-logout">{{request.user}} </span>
+
+        {% endif %}
+
+                </div>
+            </div>
+            </div>
+        </div>
+		<header id="fh5co-header-section" class="sticky-banner">
+			<div class="container">
+				<div class="nav-header">
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"></a>
+					<h1 id="fh5co-logo"><a href="{% url 'home'%}"><big><i>Sharity</i></big></a></h1>
+					<nav id="fh5co-menu-wrap" role="navigation">
+						<ul class="sf-menu" id="fh5co-primary-menu">
+							 <li class="active"><a href="{% url 'profile'%}"><strong>Profile</strong></a></li>
+                            <li><a href="{% url 'post'%}"><strong>Post Page</strong></a></li>
+                            <li><a href="{% url 'createpost'%}"><strong>Create Post</strong></a></li>
+                            </li>
+                            {% if user.is_authenticated %}
+                            <li><a href="{% url 'logout'%}"><strong>Logout</strong></a></li>
+                            {% endif %}
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		
+		<div class="fh5co-hero">
+            <div class="fh5co-overlay"></div>
+            <div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_3.jpg);">
+                <div class="desc animate-box">
+					<h2><strong><center><i>FAQs</i></center></strong></h2><br>
+					<span><a class="btn btn-primary btn-lg" href="{% url 'home'%}"><i>HOME</i></a></span>
+				</div>
+			</div>
+
+		</div>
+       <br>
+            	<style> .indented { padding-left: 50pt; padding-right: 50pt; } </style>
+        <div class="indented">
+
+        	<h3><li>What is Sharity?</li></h3>
+        	<h3>Ans:</h3>
+        	<h3>A portal for connecting charitable donors and beneficiaries for direct transfer of funds, while eliminating middlemen and possibilities of fraud.</h3>
+
+        	<h3><li>How will my donation be used?</li></h3>
+        	<h3>Ans:</h3>
+        	<h3>Your donation will directly support the people living in extreme poverty.</h3>
+
+        	<h3><li>How much of my donation is going directly to people in need?</li></h3>
+        	<h3>Ans:</h3>
+        	<h3>We ensure that 100 % of your donation will go towards the people in need.</h3>
+
+        	<h3><li>Can I dedicate my donation to someone?</li></h3>
+        	<h3>Ans:</h3>
+        	<h3>Yes. You can make your donation a tribute to someone.</h3>
+
+        	<h3><li>Will my small donation make a difference?</li></h3>
+        	<h3>Ans:</h3>
+        	<h3>Like it is said, a small amount goes a long way. Small donations make almost 90 to 95% of our entire donation collected. These small contributions that collectively add up to a large amount are needed to effect change. </h3>
+
+        	<h3><li>Is it safe to give my credit/debit card details online?</li></h3>
+        	<h3>Ans:</h3>
+        	<h3>Absolutely. We adopt stringent security measures to ensure that critically sensitive information, such as your personal information and your credit/debit card details, are protected.</h3>
+
+        	<h3><li>I would like to donate an item(like furniture, clothing). What do I do?</li></h3>
+        	<h3>Ans:</h3>
+        	<h3>It is important to make sure the items you are donating align with the actual needs. The best way to donate an item is to connect with us directly and find out what type of donations would be most helpful. </h3>
+
+        	<h3><li>Can I get a refund after making a donation?</li></h3>
+        	<h3>Ans:</h3>
+        	<h3>Once a donation has been confirmed and completed, a refund or cancellation is not possible; nor can the end purpose be changed. </h3>
+
+        	<h3><li>What happens with the personal data I enter to make the donation?</li></h3>
+        	<h3>Ans:</h3>
+        	<h3>We enforce a strict data protection policy and will never give nor sell any information regarding our donors to third parties. </h3>
+
+        	<h3><li>Can I donate to Sharity from outside of India?</li></h3>
+        	<h3>Ans:</h3>
+        	<h3>Yes, you can donate to Sharity even if you are living outside of India.</h3>
+
+        	<h3><li>Can I volunteer at Sharity?</li></h3>
+        	<h3>Ans:</h3>
+        	<h3>We welcome volunteers. Sharity is a ‘philanthropy marketplace’ and does not work directly with the underprivileged. Sharity needs support in marketing, design, verification visits, and many other areas.</h3>
+
+        </div>
+
+
+
+		<div id="fh5co-feature-product" class="fh5co-section-gray">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center heading-section">
+						<h3>Giving is a Virtue.</h3>
+					</div>
+				</div>
+
+				</div>
+				
+			</div>
+		</div>
+
+		<footer>
+			<div id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 text-center">
+							<p class="fh5co-social-icons">
+								<a href="https://twitter.com/?lang=en"><i class="icon-twitter2"></i></a>
+								<a href="https://www.facebook.com/"><i class="icon-facebook2"></i></a>
+								<a href="https://www.instagram.com/"><i class="icon-instagram"></i></a>
+							</p>
+							<p>Copyright 2021 Sharity. All Rights Reserved. <br></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/sticky.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.js"></script>
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+

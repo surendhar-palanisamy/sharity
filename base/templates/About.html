@@ -1,0 +1,224 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sharity About</title>
+
+     <link rel="shortcut icon" href="{% static '/fonts/favicon.ico'  %}">
+    
+    <link rel="stylesheet" href="{% static '/css/animate.css'  %}">
+    <link rel="stylesheet" href="{% static '/css/icomoon.css'  %}">
+    <link rel="stylesheet" href="{% static '/css/bootstrap.css'  %}">
+    <link rel="stylesheet" href="{% static '/css/superfish.css'  %}">
+    <link rel="stylesheet" href="{% static '/css/style.css'  %}">
+
+    <script src="js/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+    <style>
+        .user-logout {
+            font-size: 15px;
+            font-weight: bold;
+            color: black;
+            margin-right: 5px;
+        }
+    </style>
+
+    <div id="fh5co-wrapper">
+        <div id="fh5co-page">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 text-left fh5co-link">
+                    </div>
+                    <div class="col-md-6 col-sm-6 text-right fh5co-social">
+						{% if user.is_authenticated %}
+                    <img style="
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;" src="{{user.profile.dp.url}}" />
+       <span class="user-logout">{{request.user.profile.first_name}} {{request.user.profile.last_name}}</span>
+
+        {% else %}
+        <img style="
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;" src="{% static '/images/anonymous2.png' %}" />
+        <span class="user-logout">{{request.user}} </span>
+
+        {% endif %}
+
+                </div>
+            </div>
+            </div>
+        </div>
+
+         <header id="fh5co-header-section" class="sticky-banner" >
+            <div class="container">
+                <div class="nav-header">
+                    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"></a>
+                    <h1 id="fh5co-logo"><a href="{% url 'home'%}"><big><i>Sharity</i></big></a></h1>
+                    <nav id="fh5co-menu-wrap" role="navigation">
+                        <ul class="sf-menu" id="fh5co-primary-menu">
+                             <li class="active"><a href="{% url 'profile'%}"><strong>Profile</strong></a></li>
+                            <li><a href="{% url 'post'%}"><strong>Post Page</strong></a></li>
+                            <li><a href="{% url 'createpost'%}"><strong>Create Post</strong></a></li>
+                            {% if user.is_authenticated %}
+                            <li><a href="{% url 'logout'%}"><strong>Logout</strong></a></li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="fh5co-hero">
+			<div class="fh5co-overlay"></div>
+			<div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_1.jpg);">
+				<div class="desc animate-box">
+					<h2><strong>All About Sharity</strong></h2><br>
+					<span><a class="btn btn-primary btn-lg" href="{% url 'home'%}">HOME</a></span>
+				</div>
+			</div>
+
+		</div>
+		
+		</div>
+
+	</div>
+			
+		<div id="fh5co-feature-product" class="fh5co-section-gray">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center heading-section">
+						<h3>How we started.</h3>
+						<p>A thought to accomplish the sustainable development goal: Good Health and well being.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="feature-text">
+							<h3>Love</h3>
+							<p>The feeling of affection that makes a person want to be with another, protected, taking care of one another and being in their company. </p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="feature-text">
+							<h3>Compassion</h3>
+							<p>Motivates people to go out of their way to help the physical, mental, or emotional pains of another.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="feature-text">
+							<h3>Charity</h3>
+							<p>An organization whose primary objectives are philanthropy and social well-being.</p>
+						</div>
+					</div>
+				</div>				
+			</div>
+		</div>
+		
+		<div id="fh5co-content-section" class="fh5co-section-gray">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+						<h3>Leadership</h3>
+						<p>A practical skill encompassing the ability of an individual, group or organization to lead, influence or guide other individuals, teams, or entire organizations.</p>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="fh5co-team text-center animate-box">
+							<figure>
+								<img src="{% static '/images/dp/Abbi.jpg' %}" alt="user">
+							</figure>
+
+							<div>
+								<h3>Abbinaya Arivazhagan</h3>
+								<p><span>Founder</span></p>
+								<p>Acquired a B-Tech IT degree from College of Engineering Guindy.<br> 4 years experience as a student of CEG.</p>
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="fh5co-team text-center animate-box">
+							<figure>
+								<img src="{% static '/images/dp/Nita.jpg' %}" alt="user">
+							</figure>
+							<div>
+								<h3>Niveta Ashley Anix</h3>
+								<p><span>Founder</span></p>
+								<p>Holds a B-Tech IT degree from College of Engineering Guindy.<br> 4 years experience as a student of CEG.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="fh5co-team text-center animate-box">
+							<figure>
+								<img src="{% static '/images/dp/Suren.jpg' %}" alt="user">
+							</figure>
+							<div>
+								<h3>Surendhar Palanisamy</h3>
+								<p><span>Founder</span></p>
+								<p>Obtained a B-Tech IT degree from College of Engineering Guindy.<br> 4 years experience as a student of CEG.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="fh5co-feature-product" class="fh5co-section-gray">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center heading-section">
+						<h3>Giving is a Virtue.</h3>
+					</div>
+				</div>
+
+				</div>
+				
+			</div>
+
+		<footer>
+			<div id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 text-center">
+							<p class="fh5co-social-icons">
+								<a href="https://twitter.com/?lang=en"><i class="icon-twitter2"></i></a>
+								<a href="https://www.facebook.com/"><i class="icon-facebook2"></i></a>
+								<a href="https://www.instagram.com/"><i class="icon-instagram"></i></a>
+							</p>
+							<p>Copyright 2021 Sharity. All Rights Reserved. <br></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	
+	</div>
+
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/sticky.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.js"></script>
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
